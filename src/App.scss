@@ -1,0 +1,124 @@
+.App {
+    box-sizing: border-box;
+    padding: 2rem;
+    background-image: linear-gradient(315deg, #ffffff 0%, #e6edf5 74%);
+}
+
+h2 {
+    text-align: center;
+}
+
+.Search {
+    .Search-inputs {
+        margin: 0 1rem;
+
+        input {
+            font-size: 0.8rem;
+            width: 30%;
+            line-height: 1.5rem;
+            padding-left: 0.5rem;
+            margin-right: 0.2rem;
+        }
+
+        button {
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.Following {
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding-left: 0;
+        margin: 0 1rem;
+    
+        li {
+            padding: 1rem;
+            margin: 0.2rem;
+            border: 1px #ccc solid;
+            border-radius: 0.5rem;
+            flex: 1 1 25%;
+            word-break:break-all;
+            cursor: pointer;
+            background-color: #fff;
+
+            &:hover {
+                background-color: rgb(240, 240, 240);
+            }
+
+            button {
+                cursor: pointer;
+                float: right;
+            }
+        }
+    }
+}
+
+.Issues {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 0.85rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0;
+        margin: 0 1rem;
+        border: 1px #ccc solid;
+        border-radius: 0.5rem;
+        background-color: #fff;
+
+        li {
+            padding: 1rem;
+            border-bottom: 1px #ccc solid;
+            flex: 1 1 0;
+
+            &:last-child {
+                border: none;
+            }
+            &:hover {
+                background-color: rgb(240, 240, 240);
+            }
+
+            .Issues-title {
+                font-size: 1rem;
+                cursor: pointer;
+                margin-bottom: 0.2rem;
+                font-weight: 500;
+            }
+            .Issues-info {
+                font-size: 0.8rem;
+                color: rgb(58, 58, 58);
+            }
+        }
+    }
+
+    .Issue-pages {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0.5rem;
+
+        li {
+            list-style: none;
+            margin: 0.3rem;
+            padding-right: 0.6rem;
+            text-align: center;
+            cursor: pointer;
+            border-right: 1px #ccc solid;
+            &:last-child {
+                border: none;
+            }
+
+            &:hover {
+                color: rgb(109, 109, 109);
+            }
+        }
+    }
+}
