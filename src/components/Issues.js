@@ -32,7 +32,11 @@ function Issues(props) {
 
 
   // issue 최신순 정렬
-  issues.sort((a, b) => {
+  // issues.sort((a, b) => {
+  //   return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
+  // })
+  let sortedIssue = [...issues];
+  sortedIssue.sort((a, b) => {
     return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
   })
 
@@ -64,7 +68,7 @@ function Issues(props) {
       </div>
 
       <ul>
-        {issues.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage).map((issue, i) => {
+        {sortedIssue.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage).map((issue, i) => {
           return (<li key={i} onClick={() => window.open(`${issue.html_url}`)}>
             <div className="Issues-title">
               <span>{issue.repository_url.slice(29)}</span> <strong>{issue.title}</strong>
